@@ -17,12 +17,12 @@ Attributes:
   has_many :comments
 ```
 
-Since *Rails* automatically includes the ```id``` and ```created_at``` and ```updated_at``` columns, they are ommited from the paper representation. Once you have all your Models sketched out, then you can use the Rails generators to create them like so:
+Since *Rails* automatically includes the `id and `created_at` and `updated_at` columns, they are ommited from the paper representation. Once you have all your Models sketched out, then you can use the Rails generators to create them like so
 
-```
-  $ rails generate model User username:string email:string:index
+```bash
+$ rails generate model User username:string email:string:index
 ```
 
-It is convention in Rails to provide the ```generate model``` the name of your in a singular format. This will create the files needed for the Model, most importantly the migration file which can be found at ```db/migrate/timestamp_create_model_name.rb``` and the Model itself found at ```app/models/model_name.rb```. At this point we can run the migration files with the command ```$ bundle exec rake db:migrate``` and this will set up our database with the tables needed for our models. From this point we can now set up our relationship between the models.
+It is convention in Rails to provide the `generate model` the name of your in a singular format. This will create the files needed for the Model, most importantly the migration file which can be found at `db/migrate/timestamp_create_model_name.rb` and the Model itself found at `app/models/model_name.rb`. At this point we can run the migration files with the command `$ bundle exec rake db:migrate` and this will set up our database with the tables needed for our models. From this point we can now set up our relationship between the models.
 
 ## Relationships and Your Models
